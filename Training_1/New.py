@@ -13,9 +13,9 @@ class MyClass(object):
     radius = 5
     sphere = (4/3) * math.pi * (radius**3) 
     
-    print(sphere)
+    #print(sphere)
     decibels = 10*math.log(sphere)
-    print(decibels)
+    #print(decibels)
     
     
 
@@ -32,6 +32,24 @@ class MyClass(object):
         Constructor
         '''
         
-    print_twice('Pieter')
-    cat_twice('o', '2', '1')
+    #print_twice('Pieter')
+    #cat_twice('o', '2', '1')
+    
+    def do_twice(self, f):
+        self.f = f()
+        self.f = f()
+    
+    def print_spam(self, s):
+        self.s = print('spam')
+    
+    self.s(7)
+        
+    
+
+        
+  
+        
+    
+    
+    
     
