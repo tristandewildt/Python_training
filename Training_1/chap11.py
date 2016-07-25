@@ -29,17 +29,22 @@ def histogram(s):
         else:
             d[c] += 1
     return d
-h = histogram('content')
+h = histogram('blablacadabratesque')
 #print(h)
 #print(h.get('b'))
 
-#def reverse_lookup(d, v):
-#    for k in d:
-#        if d[k] == v:
-#            return k
-#    raise LookupError()
 
 def reverse_lookup(d, v):
+    for k in d:
+        if d[k] == v:
+            return k
+    raise LookupError()
+
+#print(reverse_lookup(h, 2))
+
+
+
+def reverse_lookup_list(d, v):
     rlist =[]
     for k in d:
         if d[k] == v:
@@ -50,17 +55,7 @@ def reverse_lookup(d, v):
 
 #print(reverse_lookup(h, 3))
 
-def invert_dict(d):
-    inverse = dict()
-    for key in d:
-        val = d[key]
-        if val not in inverse:
-            inverse[val] = [key]
-        else:
-            inverse[val].append(key)
-    return inverse
 
-#print(invert_dict(h))
 
 def fibonacci_old (n):
     if n == 0:
@@ -81,6 +76,8 @@ def fibonacci(n):
     return res
 
 #print(fibonacci(60))
+
+
 count = 0
 
 def example():
@@ -100,31 +97,38 @@ fin = open('words.txt')
 
 def set_dic():
     take = dict()
-    n=0
+    #n=1
     for line in fin:
-        take[n] = line
-        n += 1
+        take[line.strip()] = 0
+        #n += 1
     return take
 
 #print(set_dic())
+
+def invert_dict(d):
+    inverse = dict()
+    for key in d:
+        val = d[key]
+        if val not in inverse:
+            inverse[val] = [key]
+        else:
+            inverse[val].append(key)
+    return inverse
+
+#print (h)
+#print(invert_dict(h))
 
 
 def invert_dict2(d):
     inverse = dict()
     for key in d:
         val = d[key]
-        #print(val, key)
         inverse.setdefault(val, []).append(key)
-        
-        #if val not in inverse:
-        #    inverse[val] = [key]
-        #else:
-        #    inverse[val].append(key)
     return inverse
 
 #print(invert_dict2(h))
 
-liste = (10, 17, 12, 13, 11)
+liste = (10, 17, 12, 13, 10)
 
 def has_duplicates(h):
     ref = dict()
@@ -132,24 +136,23 @@ def has_duplicates(h):
         if n in ref:
             return True
         ref[n] = True
-        print(ref)
+        #print(ref)
     return False
+
+print(has_duplicates(liste))
 
 #print(has_duplicates(liste))
 
-newlist = ('pupu', 'yuyu', 'upup')
-print(newlist)
-print(ord(''))
 
-def rotate_pairs():
-    for line in fin:
+#newlist = ('pupu', 'yuyu', 'upup')
+#print(newlist)
+#print(ord(''))
+
+#def rotate_pairs():
+#    for line in fin:
         
-    result = dict()
-    for line in fin:
-        
-
-
-
+#    result = dict()
+#    for line in fin:
 
 
 
