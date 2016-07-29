@@ -43,7 +43,7 @@ def last(word):
 def middle(word):
     return word[1:-1]
     
-is_palindrome('o')
+is_palindrome('op')
 
 
 

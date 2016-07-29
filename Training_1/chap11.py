@@ -8,6 +8,7 @@ import math
 from xlwt.antlr import ifelse
 from tabulate import tabulate
 from sympy.core.numbers import NumberSymbol
+from _ast import Str
 
 
 eng2sp = dict()
@@ -93,7 +94,7 @@ def example2():
 
 #print(example2())
 
-fin = open('words.txt')
+#
 
 def set_dic():
     take = dict()
@@ -130,6 +131,13 @@ def invert_dict2(d):
 
 liste = (10, 17, 12, 13, 10)
 
+def takelasts(word, x):
+    return word[x]
+
+#    print('Lastletter in takelasts is: ' + word[-1] + '.')
+    
+ 
+
 def has_duplicates(h):
     ref = dict()
     for n in h:
@@ -139,7 +147,7 @@ def has_duplicates(h):
         #print(ref)
     return False
 
-print(has_duplicates(liste))
+#print(has_duplicates(liste))
 
 #print(has_duplicates(liste))
 
@@ -148,15 +156,77 @@ print(has_duplicates(liste))
 #print(newlist)
 #print(ord(''))
 
-#def rotate_pairs():
-#    for line in fin:
+def rotate_pairs():
+    result = dict()
+    with open('words.txt', 'r') as fin:
+        for line in fin:
+            y = check_word_to_list(line.strip())
+            if y != None:
+                result.setdefault(line.strip(),[line.strip()])
+                result[line.strip()].append(y)
+        return result 
+
+
+def check_word_to_list(line):
+    with open('words2.txt', 'r') as fin2:
+        for line2 in fin2:
+            x = check_word_to_word(line, line2.strip())
+            if x == True:
+                return line2.strip()
+            else:
+                return
+     
+
+def check_word_to_word(line, line2):
+    
+#    print('check')
+    
+    if len(line.strip()) == len(line2.strip()):
         
-#    result = dict()
-#    for line in fin:
+        lastletter = - 1
+        #works
+#        print('check2')
+#        print(line)
+#        print('line 2 is: ' + line2)
+
+        
+        for letter in line:
+            z = takelasts(line2.strip(), lastletter)
+#            print(z)
+#            print(lastletter)
+#            print(z)
+#            print(letter)
+#            print('Lastletter is' + z + '.')
+            if letter != z:
+                return False
+            else:
+                lastletter =- 1 
+        print('ja')        
+        return True
 
 
+#fin2 = open('words2.txt')
 
 
+print(rotate_pairs())
+
+
+#work = 'chaton'
+#print(work[-2])
+
+#print(rotate_pairs())                
+                
+       
+                
+                
+def first(word):
+    return word[0]
+
+def last(word):
+    return word[-1]
+
+def middle(word):
+    return word[1:-1]
 
 
 
