@@ -1,0 +1,134 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{geometry}
+\usepackage[USenglish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{makeidx}
+\usepackage{cite}
+\usepackage{wrapfig}
+\usepackage{tabularx}
+\usepackage{lscape}
+\usepackage{float}
+\usepackage{url}
+\usepackage{multicol}
+
+
+%\graphicspath{{C:/Users/tewdewildt/Dropbox/PhD thesis/Project proposal/Graphics}}
+\graphicspath{{E:/Documents/Dropbox/PhD thesis/Project proposal/Graphics}}
+\geometry{a4paper, footskip=20mm, width=160mm,top=35mm,bottom=30mm,bindingoffset=6mm}
+
+
+\title{Social choice approaches: a literature review}% of infrastructures? Or broader than 'social choice' as it links already to Arrow's paradox. Societal assessments/evaluation of infrastructures?
+\bigskip
+\author{Ir. T.E. de Wildt}
+\date{\vspace{-0.5cm}}
+
+% Or change title to 'Evaluating the value-robustness of infrastructures: a literature review'
+% Or change title to 'Evaluating the acceptability of infrastructures: a literature review'
+
+\begin{document}
+
+
+\maketitle
+	%\vspace{1 cm}
+\begin{abstract}
+	Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text.
+\end{abstract}
+		
+{\bfseries Keywords}: Social choice, Large-scale infrastructures, Ethical values
+		
+\vspace{0.8 cm}
+\begin{multicols}{2}
+%%% 1. Introduction
+\section{Introduction}
+\label{Introduction}
+
+\begin{itemize}
+	\setlength\itemsep{-0.1em}
+	\item Reason for making a literature review: 
+	\begin{itemize}
+		\setlength\itemsep{-0.1em}
+		\item Creating or choosing a system that is 'good' for an entire society is challenging due to: plurality of the population (multiple sets of values that might be conflicting), non-utilitarian factors also play a role in determining whether the system is 'good', difficulty of identifying what individuals consider to be good. {\itshape(example smart grids)}
+		\item Insights from a wide variety of different fields may however be used to tackle this challenge. Therefore, it is useful to get a clear overview of the state of research by grouping the work done in different fields. In particular, we identify opportunities in the application of quantitative tools (e.g. Agent-based modeling), which we believe will provide us with new useful insights.
+		\item Also, we did not found any comparable and complete literature review yet.
+	\end{itemize}
+	\item Goal of this article: present the outcomes of a literature review about the state of research in the creation of value robust systems.
+	\item Methods:
+	\begin{itemize}
+		\setlength\itemsep{-0.1em}
+		\item Online databases: Scopus, Web of Science
+		\item The following query is used: (TITLE-ABS-KEY("social choice") OR TITLE-ABS-KEY("societal trade-off*") OR TITLE-ABS-KEY(Arrow's theorem)) AND (TITLE-ABS-KEY(multi*) OR TITLE-ABS-KEY(many)) AND (TITLE-ABS-KEY(objective) OR TITLE-ABS-KEY(criter*))
+		\item {\itshape(Present here the process gone through during this literature review)}
+	\end{itemize}
+\end{itemize}
+
+%%% 2. Social choice
+\section{Social choice}
+\label{Social choice}
+
+\begin{enumerate}
+	\setlength\itemsep{-0.1em}
+	\item What is social choice ({\itshape In our context broader that only social choice theory})?
+	\item In which context are they relevant? Why is making a `perfect' social decision challenging/impossible ? 
+	\item A dynamic perspective: dynamic topic modeling of the semantic of `social choice' in the literature.
+\end{enumerate}
+
+\section{Results and analysis}
+\label{Results and analysis}
+
+\subsection{Overview of the results}
+\begin{enumerate}
+	\setlength\itemsep{-0.1em}
+	\item Co-authors networks
+	\item Citation networks
+	\item Others?
+\end{enumerate}
+
+Why needed?
+\begin{itemize}
+	\setlength\itemsep{-0.1em}
+	\item Garner: the use of a traditional Integrated Assessment Model (IAMs), which typically aggregate the stakeholders' preferences across the entire globe into a single a priori defined utility function (to optimize it), eliminates many relevant policy pathways.
+	\item
+\end{itemize}
+
+Why challenging?
+\begin{itemize}
+	\setlength\itemsep{-0.1em}
+	\item Munda: Says that difficulty is due to social and technical incommensurability
+	\item
+\end{itemize}
+	
+\noindent Approaches proposed:	
+\begin{itemize}
+	\setlength\itemsep{-0.1em}
+	\item Munda: Proposes the concept of social multi-criteria evaluation (SMCE). Based on the work of Arrow \& Raynaud (1986), which "showed that the relationships between multi-criteria decision theory and social choice are clear and relevant". Says that public participation is recognized as a necessary component, but not sufficient.
+	\item Buckley: proposes a fuzzy set approach. A group of judges identifies `How well each issue satisfies each criterion' and `How important each criterion is to the overall objective'. The aggregation process than has the following properties:(1) positive association of individual and group preference, (2) Pareto, (3) no judge or criterion can be dictatorial, (4) independence of irrelevant alternatives, (5) citizen's sovereignty. 
+	\item Blackorby: Proposes the concept of ‘critical-level utilitarianism'. This is done by setting a minimal degree of utilitarianism that individuals in a group should achieve. The goal is then to maximize the amount of well-being of the population that are (more) above the critical level.
+	\item Van de Poel (2015): identifies 6 methods to deal with value conflicts, with related advantages and inconveniences: Cost-Benefit Analysis, Direct Trade-Offs, Maximin, Satisficing, Judgment: Conceptualization and (Re)specification, Innovation.
+	\item Franssen (2005): Applies Arrow's theorem to multi-criteria problems, as a social-choice problem
+	\item Kasprzyk \& Reed (2015): introduces Many-objective planning, which disaggregate measures of performance while supporting the discovery of planning trade-offs, using tools such as multi-objective evolutionary algorithms (MOEAs)
+\end{itemize}
+	
+\section{Conclusions and next steps}
+\label{Conclusions and next steps}
+
+\begin{itemize}
+	\item We conclude this article by concretely identifying opportunities to evaluate the acceptability of large infrastructures, and the research that should be done for that purpose.
+\end{itemize}
+
+\end{multicols}
+\vspace{0.5 cm}
+\begin{multicols}{2}
+
+
+%%% Bibliography
+\bibliographystyle{ieeetr}
+\bibliography{Literature_literature_review}
+
+
+\end{multicols}
+\end{document}
