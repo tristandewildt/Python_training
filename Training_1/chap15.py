@@ -6,6 +6,7 @@ Created on 17 apr. 2016
 #from cmath import pi
 import math
 import copy
+import turtle
 
 
 class Point:
@@ -83,19 +84,68 @@ p2 = copy.copy(p1)
 # so you may use 'deepcopy', which also copies objects within objects.
 
 box2=copy.copy(box)
-print(box2 is box, box2.corner is box.corner)
+#print(box2 is box, box2.corner is box.corner)
 
 box3=copy.deepcopy(box) 
-print(box3 is box, box3.corner is box.corner)
+#print(box3 is box, box3.corner is box.corner)
 
 
+"""
+Exo 15.1
+"""
+
+class Circle:
+    """ This is a class of a circle"""
 
 
+Circ = Circle()
+center =  Point()
+center.x=150
+center.y=100
+radius = 75
+Circ.center = center
+Circ.radius = radius
+
+def point_in_circle(cercle,dot):
+    return distance_between_points(dot,cercle.center) <= cercle.radius
+    
+onepoint = Point()
+onepoint.x = 90
+onepoint.y = 90
+
+#print(point_in_circle(Circ,onepoint))
 
 
+rect=Rectangle()
+rect.corner = Point()
+rect.corner.x = 100
+rect.corner.y = 250
+rect.width=300
+rect.length=100
 
 
+"""
+Exo 15.2
+"""
 
+t = turtle.Turtle()
+
+def draw_rect(turtle,rect):
+    t.pu()
+    turtle.goto(rect.corner.x,rect.corner.y)
+    t.pd()
+    turtle.fd(rect.width)
+    turtle.rt(90)
+    turtle.fd(rect.length)
+    turtle.rt(90)
+    turtle.fd(rect.width)
+    turtle.rt(90)
+    turtle.fd(rect.length)
+
+draw_rect(t, rect)
+
+
+turtle.mainloop()
 
 
 
